@@ -1,0 +1,195 @@
+\documentclass[11pt, a4paper]{article}
+
+% =====================
+% PACKAGES
+% =====================
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{caption}
+
+% =====================
+% CONFIG
+% =====================
+\geometry{margin=1in}
+\definecolor{codegray}{rgb}{0.95,0.95,0.95}
+
+\lstset{
+    backgroundcolor=\color{codegray},
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    columns=fullflexible
+}
+
+% =====================
+% TITLE
+% =====================
+\title{\textbf{Project RIFT-MNEMOS:}\\
+\large Spatially Gated Memory Emergence in a Non-Equilibrium Antagonistic Substrate}
+
+\author{
+\textbf{Akshay John} \\
+Independent Researcher \\
+\texttt{Experiment Series: RIFT-003 / MNEMOS-V}
+}
+
+\date{January 2026}
+
+\begin{document}
+\maketitle
+
+% =====================
+% ABSTRACT
+% =====================
+\begin{abstract}
+Modern artificial intelligence relies on optimization against explicit objectives.
+In contrast, biological intelligence emerges from systems forced to persist under continuous internal and environmental stress.
+We present \textbf{RIFT-MNEMOS}, a non-optimizing, antagonistically regulated substrate in which memory arises as irreversible topological deformation.
+We demonstrate that naive scarring mechanisms fail due to global callus formation and catastrophic interference.
+By introducing spatial novelty gating, the system selectively consolidates episodic trauma while remaining robust to background homeostatic noise.
+This work establishes a reproducible physical mechanism for distributed memory formation without loss functions, backpropagation, or symbolic supervision.
+\end{abstract}
+
+% =====================
+% INTRODUCTION
+% =====================
+\section{Introduction}
+
+Transformers and related architectures are fundamentally reactive systems: computation begins only upon prompt invocation.
+Biological systems, in contrast, exist continuously and must actively resist entropy.
+Project RIFT explores whether intelligence prerequisites can emerge from \textit{forced persistence}, rather than task-driven optimization.
+
+This paper does not claim intelligence.
+It documents the construction and failure-driven refinement of a memory-capable substrate.
+
+% =====================
+% ARCHITECTURE
+% =====================
+\section{System Architecture}
+
+RIFT consists of three antagonistic components:
+
+\begin{enumerate}
+    \item \textbf{Tectonic Substrate}: A $48 \times 48 \times 32$ continuous grid updated via local stress diffusion.
+    \item \textbf{Fracture Law}: Local fracture occurs when stress exceeds elasticity, dissipating energy while hardening structure.
+    \item \textbf{Antagonist Ego}: A global regulator enforcing non-equilibrium:
+    \begin{itemize}
+        \item Low fracture $\rightarrow$ inject noise (PRESSURIZE)
+        \item High fracture $\rightarrow$ damp state (CONSTRAIN)
+    \end{itemize}
+\end{enumerate}
+
+The system is always active. There is no inference mode.
+
+% =====================
+% FAILURE MODES
+% =====================
+\section{Observed Failure Modes}
+
+\subsection{Thermodynamic Explosion}
+Unbounded stress amplification resulted in numerical divergence.
+
+\subsection{Thermodynamic Coma}
+Excessive damping collapsed the system into inert equilibrium.
+
+\subsection{Global Callus Formation}
+Single-layer elasticity caused background Ego noise to harden the entire substrate, blocking future learning.
+
+\subsection{Catastrophic Interference}
+Sequential trauma erased prior memory traces without spatial isolation.
+
+% =====================
+% EPISODIC MEMORY
+% =====================
+\section{Experiment I: Episodic Trauma Adaptation}
+
+\subsection{Protocol}
+A localized impulse ($F=6.0$) was injected every 50 timesteps.
+
+\subsection{Result}
+Peak fracture at impact decreased monotonically across exposures, demonstrating structural adaptation.
+
+\begin{lstlisting}
+Impact 1: 0.0644
+Impact 6: 0.0092
+Impact 12: 0.0036
+\end{lstlisting}
+
+% =====================
+% CAPACITY TESTS
+% =====================
+\section{Experiment II: Spatial Capacity (MNEMOS-II/III)}
+
+Sequential trauma at 9 sites revealed severe interference.
+Maximum retention without intervention was 4/9 sites.
+
+% =====================
+% DUAL TIMESCALE FAILURE
+% =====================
+\section{Experiment III: Dual-Timescale Failure}
+
+Separating fast and slow elasticity alone caused \textit{homeostatic insulation}, preventing trauma from reaching long-term memory.
+
+% =====================
+% SPATIAL GATING
+% =====================
+\section{Experiment IV: Spatial Gating (MNEMOS-V)}
+
+\subsection{Method}
+Memory consolidation was gated by spatial sharpness:
+
+\[
+G(x,y) = |\sigma(x,y) - \mu_{\text{local}}|
+\]
+
+Slow memory updated only if $G(x,y) > \theta$.
+
+\subsection{Result}
+
+\begin{lstlisting}
+Sites Retained: 7 / 9
+Blocked Sites: Stress-diffusion overlap
+\end{lstlisting}
+
+\subsection{Interpretation}
+Memory is physically coupled, not discretely addressable.
+
+% =====================
+% DISCUSSION
+% =====================
+\section{Discussion}
+
+RIFT-MNEMOS demonstrates:
+\begin{itemize}
+    \item Memory without optimization
+    \item Structural persistence under antagonism
+    \item Resolution of stability-plasticity via geometry
+\end{itemize}
+
+It does not demonstrate reasoning, abstraction, or intelligence.
+
+% =====================
+% FUTURE WORK
+% =====================
+\section{Future Directions}
+
+Future research will explore:
+\begin{itemize}
+    \item Predictive dynamics based on scar geometry
+    \item Non-symbolic input modalities
+    \item Emergent internal world models
+\end{itemize}
+
+\section{Conclusion}
+
+We have constructed a physical memory substrate.
+Intelligence remains an open question.
+
+\end{document}

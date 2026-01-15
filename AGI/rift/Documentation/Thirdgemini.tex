@@ -1,0 +1,122 @@
+\documentclass[11pt, a4paper]{article}
+
+% =====================
+% PACKAGES
+% =====================
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{caption}
+
+% =====================
+% CONFIG
+% =====================
+\geometry{margin=1in}
+\definecolor{codegray}{rgb}{0.95,0.95,0.95}
+
+\lstset{
+    backgroundcolor=\color{codegray},
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    columns=fullflexible
+}
+
+% =====================
+% TITLE
+% =====================
+\title{\textbf{Project RIFT-MNEMOS:}\\
+\large Emergence of Spatially Gated Episodic Memory in a Non-Equilibrium Substrate}
+
+\author{
+\textbf{Akshay John} \\
+Independent Researcher \\
+\texttt{Experiment Series: RIFT-003 / MNEMOS-V}
+}
+
+\date{January 2026}
+
+\begin{document}
+\maketitle
+
+% =====================
+% ABSTRACT
+% =====================
+\begin{abstract}
+[cite_start]Current Artificial Intelligence (AI) architectures, such as Transformers, rely on global optimization (backpropagation) to encode information. [cite: 1] In contrast, biological memory emerges from substrates that must persist under continuous environmental stress. We present \textbf{RIFT} (Resilient Internal Fracture Topology), a neural cellular automaton governed by antagonistic homeostatic regulation. We demonstrate that memory arises not as updated weights, but as \textbf{irreversible topological scarring}. Through a series of failure-driven experiments (MNEMOS I-V), we identify that naive homeostatic regulation leads to "Global Callus" formation, blocking learning. [cite_start]We resolve this by introducing a \textbf{Spatial Novelty Gate}, achieving a memory capacity of 78\% (7/9 sites) in a continuous, non-optimizing substrate. [cite: 5, 22]
+\end{abstract}
+
+% =====================
+% 1. INTRODUCTION
+% =====================
+\section{Introduction}
+[cite_start]We posit that AGI cannot be built on "Brains in a Jar" (Transformers) which are static and task-dependent. [cite: 8] AGI requires a "Body" that persists in time. Project RIFT investigates the hypothesis: \textit{Can a system encode information purely through physical deformation (scarring) to survive environmental stress?}
+
+% =====================
+% 2. ARCHITECTURE
+% =====================
+\section{System Architecture}
+The system is a $48 \times 48 \times 32$ grid governed by three laws:
+\begin{enumerate}
+    \item \textbf{The Substrate:} A diffusive grid that propagates energy.
+    \item \textbf{The Fracture Law:} If local stress $\sigma >$ Elasticity $E$, the grid fractures. [cite_start]This dissipates energy but permanently increases $E$ (Scarring). [cite: 13]
+    \item \textbf{The Antagonist Ego:} A global regulator that enforces non-equilibrium. [cite_start]It injects chaos if the system is too stable ($Fracture < 0.005$) and damps energy if the system explodes ($Fracture > 0.15$). [cite: 14]
+\end{enumerate}
+
+% =====================
+% 3. FAILURE ANALYSIS (The Journey)
+% =====================
+\section{Methodology: Failure-Driven Refinement}
+
+\subsection{Phase 1: Thermodynamic Instability}
+[cite_start]Initial attempts lacked energy dissipation limits, resulting in positive feedback loops and numerical divergence ($Fracture \rightarrow \infty$). [cite: 15]
+
+\subsection{Phase 2: The Global Callus (MNEMOS-II)}
+We attempted to store memories by hardening the substrate upon fracture. However, the Antagonist Ego's constant background noise caused the entire grid to harden uniformly.
+\textbf{Result:} The system became "numb" to new information. [cite_start]Capacity $\approx 1/9$ sites. [cite: 16]
+
+\subsection{Phase 3: Dual-Timescale Failure (MNEMOS-IV)}
+We separated memory into Fast (Skin) and Slow (Bone) layers. [cite_start]This failed because the Fast layer absorbed all stress, effectively "insulating" the Slow layer from ever learning. [cite: 21]
+
+% =====================
+% 4. THE SOLUTION (MNEMOS-V)
+% =====================
+\section{Experiment IV: Spatially Gated Memory (MNEMOS-V)}
+
+\subsection{Hypothesis}
+To solve the Signal-to-Noise problem between the Ego (Noise) and the Input (Signal), we introduced a **Spatial Gating Mechanism**. Learning in the permanent memory layer is gated by the "Sharpness" of the stress field:
+\[ G(x,y) = |\sigma(x,y) - \mu_{local}| \]
+[cite_start]This ensures only structured, high-frequency events (Trauma) cause scarring, while diffuse Ego noise is ignored. [cite: 22]
+
+\subsection{Results}
+We subjected the substrate to 9 sequential trauma events at distinct spatial locations.
+\begin{lstlisting}
+Step 000 | Target X1 | Initial Trauma: 0.2604
+...
+Step 800 | Target X9 | Initial Trauma: 0.0024
+\end{lstlisting}
+
+\textbf{Recall Test:}
+\begin{lstlisting}
+Recall X1: 0.0023 (Baseline: 0.2604) -> REMEMBERED
+Recall X2: 0.0000 (Baseline: 0.0000) -> BLOCKED
+...
+Recall X9: 0.0000 (Baseline: 0.0024) -> REMEMBERED
+\end{lstlisting}
+
+\subsection{Verdict}
+\textbf{Sites Retained: 7 / 9}. [cite_start]The system successfully differentiated between homeostatic noise and meaningful environmental stress, encoding the latter as persistent topological scars. [cite: 23]
+
+% =====================
+% 5. DISCUSSION & CONCLUSION
+% =====================
+\section{Conclusion}
+RIFT demonstrates that memory is not merely the storage of data, but the \textbf{physical adaptation to trauma}. By implementing spatial gating, we have engineered a non-equilibrium substrate capable of continuous, unsupervised learning. [cite_start]This provides a physical foundation for future AGI architectures that require embodied persistence. [cite: 25]
+
+\end{document}
