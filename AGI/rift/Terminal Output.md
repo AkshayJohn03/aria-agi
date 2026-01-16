@@ -2326,3 +2326,128 @@ EP 2800 | Biome Repeated cue | H_max 1.00 | B_max 1.00
    [SNIP] H_max: 93.59 | B_max: 1.00
    [CHAO] H_max: 93.03 | B_max: 1.00
 (.venv) PS D:\aria\aria_ai\aria_ai_assistant> 
+
+(.venv) PS D:\aria\aria_ai\aria_ai_assistant> python .\AGI\rift\rift_speciation.py      
+🧬 PROJECT RIFT: SPECIATION ON cuda
+   (Hypothesis: Isolation forces distinct morphological strategies.)
+
+🌌 STARTING UNIVERSE: CRUSHER
+   EP 0000 | H_max: 1.00 | B_max: 1.00
+   EP 0500 | H_max: 1.00 | B_max: 1.00
+   EP 1000 | H_max: 1.00 | B_max: 1.00
+   EP 1500 | H_max: 1.00 | B_max: 1.00
+🏁 FINAL SPECIES [CRUSHER]: H=1.00, B=1.00
+
+🌌 STARTING UNIVERSE: SNIPER
+   EP 0000 | H_max: 1.00 | B_max: 1.10
+   EP 0500 | H_max: 1.10 | B_max: 1.00
+   EP 1000 | H_max: 1.10 | B_max: 1.00
+   EP 1500 | H_max: 1.10 | B_max: 1.00
+🏁 FINAL SPECIES [SNIPER]: H=1.10, B=1.00
+(.venv) PS D:\aria\aria_ai\aria_ai_assistant>
+
+(.venv) PS D:\aria\aria_ai\aria_ai_assistant> python .\AGI\rift\rift_speciation_v2.py
+🧬 PROJECT RIFT: SPECIATION v2 ON cuda
+   (Hypothesis: Suffering drives adaptation. Damage -> Health, Frustration -> Battery.)
+
+🌌 STARTING UNIVERSE: CRUSHER
+   EP 0000 | H_max: 1.05 | B_max: 1.05
+   EP 0500 | H_max: 26.05 | B_max: 26.05
+   EP 1000 | H_max: 51.05 | B_max: 51.05
+   EP 1500 | H_max: 76.05 | B_max: 76.05
+   EP 2000 | H_max: 101.05 | B_max: 101.05
+   EP 2500 | H_max: 126.05 | B_max: 126.05
+🏁 FINAL SPECIES [CRUSHER]: H=151.00, B=151.00
+
+🌌 STARTING UNIVERSE: SNIPER
+   EP 0000 | H_max: 1.05 | B_max: 1.05
+   EP 0500 | H_max: 26.05 | B_max: 26.05
+   EP 1000 | H_max: 51.05 | B_max: 51.05
+   EP 1500 | H_max: 76.05 | B_max: 76.05
+   EP 2000 | H_max: 101.05 | B_max: 101.05
+   EP 2500 | H_max: 126.05 | B_max: 126.05
+🏁 FINAL SPECIES [SNIPER]: H=151.00, B=151.00
+(.venv) PS D:\aria\aria_ai\aria_ai_assistant> python .\AGI\rift\rift_min_speciation.py
+🧬 PROJECT RIFT: MINIMAL SPECIATION ON cuda
+   (Hypothesis: Hard physiological exclusion forces divergence.)
+
+🌍 UNIVERSE: CRUSHER
+EP 0000 | H=1.00 | B=1.00
+EP 0500 | H=1.00 | B=1.00
+EP 1000 | H=1.00 | B=1.00
+EP 1500 | H=1.00 | B=1.00
+🏁 FINAL [CRUSHER] → H=1.00 | B=1.00
+
+🌍 UNIVERSE: SNIPER
+EP 0000 | H=1.00 | B=1.00
+EP 0500 | H=1.00 | B=1.00
+EP 1000 | H=1.00 | B=1.00
+EP 1500 | H=1.00 | B=1.00
+🏁 FINAL [SNIPER] → H=1.00 | B=1.00
+(.venv) PS D:\aria\aria_ai\aria_ai_assistant> python .\AGI\rift\rift_population.py    
+🦠 PROJECT RIFT: POPULATION ON cuda
+   (Hypothesis: Variation + Selection > Learning from Death)
+
+🌌 UNIVERSE: CRUSHER
+Traceback (most recent call last):
+  File "D:\aria\aria_ai\aria_ai_assistant\AGI\rift\rift_population.py", line 226, in <module>
+    run_universe("CRUSHER") # Expect High H
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\aria\aria_ai\aria_ai_assistant\AGI\rift\rift_population.py", line 210, in run_universe
+    score = evaluate_mutant(m, biome, brain)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\aria\aria_ai\aria_ai_assistant\AGI\rift\rift_population.py", line 171, in evaluate_mutant
+    state = body.state()
+            ^^^^^^^^^^^^
+  File "D:\aria\aria_ai\aria_ai_assistant\AGI\rift\rift_population.py", line 128, in state
+    self.health/self.genes.h_max, self.genes.battery_max
+                                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Genotype' object has no attribute 'battery_max'
+(.venv) PS D:\aria\aria_ai\aria_ai_assistant> python .\AGI\rift\rift_population.py
+🦠 PROJECT RIFT: POPULATION (FIXED) ON cuda
+   (Hypothesis: Variation + Selection > Learning from Death)
+
+🌌 UNIVERSE: CRUSHER
+   Gen 000 | Best Score: 62.0 | H: 0.92 | B: 0.94
+   Gen 005 | Best Score: 65.6 | H: 0.73 | B: 0.98
+   Gen 010 | Best Score: 67.1 | H: 0.61 | B: 0.88
+   Gen 015 | Best Score: 71.1 | H: 0.47 | B: 0.89
+   Gen 020 | Best Score: 72.5 | H: 0.41 | B: 0.90
+   Gen 025 | Best Score: 72.5 | H: 0.41 | B: 0.90
+   Gen 030 | Best Score: 72.5 | H: 0.41 | B: 0.90
+   Gen 035 | Best Score: 72.5 | H: 0.41 | B: 0.90
+   Gen 040 | Best Score: 72.5 | H: 0.41 | B: 0.90
+   Gen 045 | Best Score: 72.5 | H: 0.41 | B: 0.90
+🏁 RESULT [CRUSHER]: H=0.40, B=0.90
+
+🌌 UNIVERSE: SNIPER
+   Gen 000 | Best Score: 65.4 | H: 0.91 | B: 0.92
+   Gen 005 | Best Score: 67.7 | H: 0.73 | B: 0.94
+   Gen 010 | Best Score: 68.5 | H: 0.68 | B: 0.91
+   Gen 015 | Best Score: 68.5 | H: 0.68 | B: 0.91
+   Gen 020 | Best Score: 68.5 | H: 0.68 | B: 0.91
+   Gen 025 | Best Score: 68.5 | H: 0.68 | B: 0.91
+   Gen 030 | Best Score: 69.1 | H: 0.61 | B: 0.92
+   Gen 035 | Best Score: 69.1 | H: 0.61 | B: 0.92
+   Gen 040 | Best Score: 69.4 | H: 0.57 | B: 0.93
+   Gen 045 | Best Score: 69.8 | H: 0.56 | B: 0.90
+🏁 RESULT [SNIPER]: H=0.56, B=0.90
+(.venv) PS D:\aria\aria_ai\aria_ai_assistant> python .\AGI\rift\rift_necessity.py     
+🔥 PROJECT RIFT: NECESSITY ON cuda
+   (Hypothesis: Global stress forces Durability. Local lethal stress forces Agility.)
+
+🌌 UNIVERSE: CRUSHER
+   Gen 000 | Score: 120 | H: 0.88 | B: 0.91
+   Gen 010 | Score: 120 | H: 1.31 | B: 0.64
+   Gen 020 | Score: 120 | H: 1.12 | B: 0.60
+   Gen 030 | Score: 120 | H: 1.10 | B: 0.69
+   Gen 040 | Score: 120 | H: 0.93 | B: 0.47
+🏁 FINAL [CRUSHER]: H=1.29, B=0.64
+
+🌌 UNIVERSE: SNIPER
+   Gen 000 | Score: 120 | H: 1.12 | B: 0.87
+   Gen 010 | Score: 120 | H: 0.80 | B: 0.46
+   Gen 020 | Score: 120 | H: 0.74 | B: 0.58
+   Gen 030 | Score: 120 | H: 0.81 | B: 0.35
+   Gen 040 | Score: 120 | H: 0.53 | B: 0.26
+🏁 FINAL [SNIPER]: H=0.42, B=0.14
