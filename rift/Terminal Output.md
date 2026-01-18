@@ -2451,3 +2451,59 @@ AttributeError: 'Genotype' object has no attribute 'battery_max'
    Gen 030 | Score: 120 | H: 0.81 | B: 0.35
    Gen 040 | Score: 120 | H: 0.53 | B: 0.26
 🏁 FINAL [SNIPER]: H=0.42, B=0.14
+==========================================================================================
+PHASE A1: RIFT-A (COMMITMENT UNDER ISCHEMIC PRESSURE)
+==========================================================================================
+
+(.venv) PS D:\aria\aria_ai\aria_ai_assistant> python .\AGI\rift_a\experiments\diag_trace.py
+🔬 DIAGNOSTIC: Trace Signal Dynamics (Frozen Config)
+   Config: Cue @ 65, Hazard @ 80
+   T    | Trace (Mean) | Cue   | Hazard
+---------------------------------------------
+   63   | 0.0000       | False | False
+   64   | 0.0000       | False | False
+   65   | 0.3125       | True  | False
+   66   | 0.2812       | False | False
+   67   | 0.2531       | False | False
+   68   | 0.2278       | False | False
+   69   | 0.2050       | False | False
+   70   | 0.1845       | False | False
+   71   | 0.1661       | False | False
+   72   | 0.1495       | False | False
+   73   | 0.1345       | False | False
+   74   | 0.1211       | False | False
+   75   | 0.1090       | False | False
+   78   | 0.0794       | False | False
+   79   | 0.0715       | False | False
+   80   | 0.0643       | False | True
+   81   | 0.0579       | False | True
+   82   | 0.0521       | False | True
+---------------------------------------------
+   MAX Trace Value: 0.3125
+   Steps > 0.1: 11
+
+(.venv) PS D:\aria\aria_ai\aria_ai_assistant> python .\AGI\rift_a\experiments\exp_mini.py
+🚀 STARTING PHASE A1 (MINI): 4D Observation Baseline
+   Device: cpu
+
+--- Testing Geometric Agent ---
+   Threshold 0.1: Survival Rate = 0.40
+   Threshold 0.15: Survival Rate = 0.40
+   Threshold 0.2: Survival Rate = 0.40
+   Threshold 0.25: Survival Rate = 0.40
+
+--- Training Transformer Agent ---
+
+--- Training RNN Agent ---
+
+--- Training RL Agent ---
+
+✅ Phase A1 (Mini) Complete.
+
+📊 EXPERIMENT SUMMARY (MINI)
+Agent           | Survival   | Commit T   | Energy Wasted   | Fail: Late | Fail: FN
+--------------------------------------------------------------------------------
+Geometric       | 0.40       | 45.2       | 14.0           | 0.00       | 0.00
+Transformer     | 0.00       | 100.0       | 0.0           | 0.00       | 1.00
+RNN             | 0.00       | 86.1       | 7.5           | 0.00       | 0.86
+RL              | 0.07       | 14.8       | 49.6           | 0.00       | 0.10
