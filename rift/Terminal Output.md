@@ -2507,3 +2507,76 @@ Geometric       | 0.40       | 45.2       | 14.0           | 0.00       | 0.00
 Transformer     | 0.00       | 100.0       | 0.0           | 0.00       | 1.00
 RNN             | 0.00       | 86.1       | 7.5           | 0.00       | 0.86
 RL              | 0.07       | 14.8       | 49.6           | 0.00       | 0.10
+
+==========================================================================================
+PHASE A1: CALIBRATION LOGS (INTERMEDIATE FAILURES)
+==========================================================================================
+
+[RUN 1: INITIAL CONFIGURATION]
+Config: Trace Decay 0.8 | Ischemia Cost 0.05 | Cue Intensity 1.0
+(.venv) PS D:\aria\aria_ai\aria_ai_assistant> python .\AGI\rift_a\experiments\exp_mini.py
+🚀 STARTING PHASE A1 (MINI): 4D Observation Baseline
+   Device: cpu
+
+--- Testing Geometric Agent ---
+   Threshold 0.3: Survival Rate = 0.00
+   Threshold 0.5: Survival Rate = 0.00
+   Threshold 0.7: Survival Rate = 0.00
+   Threshold 0.9: Survival Rate = 0.00
+
+📊 EXPERIMENT SUMMARY (MINI)
+Agent           | Survival   | Commit T   | Energy Wasted   | Fail: Late | Fail: FN
+--------------------------------------------------------------------------------
+Geometric       | 0.00       | 100.0      | 0.0             | 0.00       | 1.00
+Transformer     | 0.00       | 100.0      | 0.0             | 0.00       | 1.00
+RNN             | 0.00       | 100.0      | 0.0             | 0.00       | 1.00
+RL              | 0.00       | 100.0      | 0.0             | 0.00       | 1.00
+
+ANALYSIS:
+Trace signal likely decaying below noise floor before Hazard. Agent never detects Cue.
+
+[RUN 2: DIAGNOSIS STEP]
+Config: Decay 0.8 -> 0.9 (Proposed) | Cue 5.0
+(.venv) PS D:\aria\aria_ai\aria_ai_assistant> python .\AGI\rift_a\experiments\diag_trace.py
+🔬 DIAGNOSTIC: Trace Signal Dynamics
+   Config: Cue @ 65, Hazard @ 80
+   T    | Trace (Mean) | Cue   | Hazard
+---------------------------------------------
+   63   | 0.0000       | False | False
+   64   | 0.0000       | False | False
+   65   | 0.3125       | True  | False
+   ...
+   75   | 0.1090       | False | False
+   ...
+   80   | 0.0643       | False | True
+---------------------------------------------
+   MAX Trace Value: 0.3125
+   Steps > 0.1: 11
+
+ANALYSIS:
+Signal is now visible for 11 steps. Threshold 0.1 should work.
+
+[RUN 3: POST-CALIBRATION EXPERIMENT (FINAL)]
+Config: Decay 0.9 | Ischemia 0.03 | Cue 5.0
+(.venv) PS D:\aria\aria_ai\aria_ai_assistant> python .\AGI\rift_a\experiments\exp_mini.py
+🚀 STARTING PHASE A1 (MINI): 4D Observation Baseline
+   Device: cpu
+
+--- Testing Geometric Agent ---
+   Threshold 0.1: Survival Rate = 0.40
+   Threshold 0.15: Survival Rate = 0.40
+   Threshold 0.2: Survival Rate = 0.40
+   Threshold 0.25: Survival Rate = 0.40
+
+✅ Phase A1 (Mini) Complete.
+
+📊 EXPERIMENT SUMMARY (MINI)
+Agent           | Survival   | Commit T   | Energy Wasted   | Fail: Late | Fail: FN
+--------------------------------------------------------------------------------
+Geometric       | 0.40       | 45.2       | 14.0           | 0.00       | 0.00
+Transformer     | 0.00       | 100.0       | 0.0           | 0.00       | 1.00
+RNN             | 0.00       | 86.1       | 7.5           | 0.00       | 0.86
+RL              | 0.07       | 14.8       | 49.6           | 0.00       | 0.10
+
+ANALYSIS:
+Geometric Agent survives (40%). Neural Agents fail (0-7%). Environment validated.
