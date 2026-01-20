@@ -1,0 +1,61 @@
+# System files
+.DS_Store
+.idea/
+.vscode/
+
+# Node dependencies
+node_modules/
+package-lock.json
+
+# Build artifacts
+/build/
+
+# Vite config
+vite.config.*s.*
+
+# Root level files to ignore
+README.md
+aria_ai_assistant.code-workspace
+dataset_info.txt
+log_run_A.png
+log_run_B.png
+log_run_C.png
+
+# Root level directories to ignore
+/config/
+/docs/
+/frontend/
+/model/
+/organism_scans/
+/scripts/
+/tools/
+/train/
+/training/
+
+# Datasets
+/datasets/
+/my_datasets/focused_chat/
+my_datasets/processed/
+my_datasets/raw/
+my_datasets/web/
+/my_datasets/organised/
+hull-tactical-market-prediction.zip
+
+# Artifacts and logs
+/artifacts/
+/diagnostics/
+/logs/
+/resume_state/
+flash_attn-2.8.3/
+zia_model_package/
+__pycache__
+
+
+# Data files
+*.json
+*.jsonl
+*.csv
+*.ico
+*.pt
+*.zip
+.env
