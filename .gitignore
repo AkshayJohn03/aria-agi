@@ -34,11 +34,7 @@ log_run_C.png
 
 # Datasets
 /datasets/
-/my_datasets/focused_chat/
-my_datasets/processed/
-my_datasets/raw/
-my_datasets/web/
-/my_datasets/organised/
+/my_datasets/
 hull-tactical-market-prediction.zip
 
 # Artifacts and logs

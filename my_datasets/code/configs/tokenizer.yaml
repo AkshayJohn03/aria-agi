@@ -1,7 +1,0 @@
-stage: train_tokenizer
-data_glob: "datasets/organized/merged/merged_part_*.jsonl"
-tokenizer_dir: "artifacts/tokenizer_32k"
-vocab_size: 32000
-min_frequency: 2
-text_key: content
-include_roles: true
